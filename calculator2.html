@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="css/second.css">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="css/new.css"> -->
+    <script src="js/second.js"></script>
+</head>
+<body>
+    
+
+<h1> Iphone Calculator </h1>  
+<div class= "formstyle">  
+  <button id="camera"></button><button id="mic"></button>
+  <button id="time" style="color: white;"><script>
+    var myVar = setInterval(myTimer, 1000);
+    function myTimer() {
+        var d = new Date();
+        document.getElementById("time").innerHTML = d.toLocaleTimeString('en-US', { timeZone: 'Africa/Lagos'});
+    }
+    </script></button>
+<form name = "form1" class="main-div main-div1" >  
+     
+    <!-- This input box shows the button pressed by the user in calculator. -->  
+  <input id = "calc" type ="text" name = "answer" disabled=""> <br> 
+  <input id = "calc2" type ="text" name = "equation" disabled="" value="0">  
+  <!-- Display the calculator button on the screen. -->  
+  <!-- onclick() function display the number prsses by the user. -->  
+  <input type = "button" value = "C" onclick = "form1.answer.value = ' ';  
+  form1.equation.value = '0'" id= "clear" >  
+  <input type="button" value="DEL" onclick = "backspace()" id="top">
+  <input type="button" value="%" onclick = "form1.answer.value += '%' " id="top">
+  <input type = "button" value = "/" onclick = "form1.answer.value += '/' " id="left">  
+  <br> 
+  <input type = "button" value = "7" onclick = "form1.answer.value += '7' ">  
+  <input type = "button" value = "8" onclick = "form1.answer.value += '8' ">  
+  <input type = "button" value = "9" onclick = "form1.answer.value += '9' ">  
+  <input type = "button" value = "x" onclick = "form1.answer.value += '*' " id="left">  
+  <br> 
+  <input type = "button" value = "4" onclick = "form1.answer.value += '4' ">  
+  <input type = "button" value = "5" onclick = "form1.answer.value += '5' ">  
+  <input type = "button" value = "6" onclick = "form1.answer.value += '6' ">  
+  <input type = "button" value = "-" onclick = "form1.answer.value += '-' " id="left">  
+  <br>  
+    
+  
+  <input type = "button" value = "1" onclick = "form1.answer.value += '1' ">  
+  <input type = "button" value = "2" onclick = "form1.answer.value += '2' ">  
+  <input type = "button" value = "3" onclick = "form1.answer.value += '3' ">  
+  <input type = "button" value = "+" onclick = "form1.answer.value += '+' " id="left">  
+<br/>
+  
+  
+    
+  
+    
+ 
+  <input type = "button" value = "0" onclick = "form1.answer.value += '0' " id="lngbtn">  
+    <input type = "button" value = "." onclick = "form1.answer.value += '.' ">  
+    <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->  
+  <input type = "button" value = "=" onclick = "form1.equation.value = eval(form1.answer.value) " id="left">  
+  <br>   
+  <!-- Display the Cancel button and erase all data entered by the user. -->  
+  
+  <br>
+ 
+</form>  
+<br>
+<button id="touchid"></button>
+
+</div>  
+</body>  
+</html>
